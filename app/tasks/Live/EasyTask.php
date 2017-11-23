@@ -6,6 +6,7 @@ use App\Tasks\Task;
 use App\Core\Cli\Task\WebSocket;
 use swoole_websocket_frame;
 use swoole_websocket_server;
+use Xin\Cli\Color;
 
 class EasyTask extends WebSocket
 {
@@ -14,17 +15,26 @@ class EasyTask extends WebSocket
 
     protected function connect(swoole_websocket_server $server, $request)
     {
-        // TODO: Implement connect() method.
+        echo Color::colorize('connect') . PHP_EOL;
     }
 
     protected function message(swoole_websocket_server $server, swoole_websocket_frame $frame)
     {
         // TODO: Implement message() method.
+
+        $message = json_decode($frame->data, true);
+        if (isset($message['type'])) {
+            dump($message['type']);
+        } else {
+            dump($message['event']);
+        }
+
+        $server->push($frame->fd, json_encode($message));
     }
 
     protected function close($ser, $fd)
     {
-        // TODO: Implement close() method.
+        echo Color::colorize('close') . PHP_EOL;
     }
 
 }

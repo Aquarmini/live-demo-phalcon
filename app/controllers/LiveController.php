@@ -5,9 +5,9 @@ namespace App\Controllers;
 class LiveController extends Controller
 {
 
-    public function easyAction()
+    public function easyLiverAction()
     {
-        return $this->view->render('live', 'easy');
+        return $this->view->render('live/easy', 'liver');
     }
 
 }

@@ -7,4 +7,4 @@
 // | Author: limx <715557344@qq.com> <https://github.com/limingxinleo>
 // +----------------------------------------------------------------------
 
-$router->add('/live/easy', 'App\\Controllers\\Live::easy')->setName('live.easy');
+$router->add('/live/easy/liver', 'App\\Controllers\\Live::easyLiver')->setName('live.easy.liver');
