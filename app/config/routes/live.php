@@ -7,6 +7,6 @@
 // | Author: limx <715557344@qq.com> <https://github.com/limingxinleo>
 // +----------------------------------------------------------------------
 
-$router->add('/live/easy/liver', 'App\\Controllers\\Live::easyLiver')->setName('live.easy.liver');
+$router->add('/live/webrtc/liver', 'App\\Controllers\\Live::webrtcLiver')->setName('live.webrtc.liver');
 
-$router->add('/live/easy/watcher', 'App\\Controllers\\Live::easyWatcher')->setName('live.easy.watcher');
+$router->add('/live/webrtc/watcher', 'App\\Controllers\\Live::webrtcWatcher')->setName('live.webrtc.watcher');

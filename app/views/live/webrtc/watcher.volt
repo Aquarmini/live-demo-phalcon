@@ -25,16 +25,6 @@
 
         var video = document.getElementById('video');
 
-        //发送ICE候选到其他客户端
-        pc.onicecandidate = function (event) {
-            socket.send(JSON.stringify({
-                "event": "__ice_candidate",
-                "data": {
-                    "candidate": event.candidate
-                }
-            }));
-        };
-
         //如果检测到媒体流连接到本地，将其绑定到一个video标签上输出
         pc.onaddstream = function (event) {
             video.src = URL.createObjectURL(event.stream);

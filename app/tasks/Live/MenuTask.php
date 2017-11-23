@@ -17,7 +17,7 @@ class MenuTask extends Task
         echo Color::colorize('  php run live:[action]', Color::FG_LIGHT_GREEN) . PHP_EOL . PHP_EOL;
 
         echo Color::head('Actions:') . PHP_EOL;
-        echo Color::colorize('  easy    单房间直播', Color::FG_LIGHT_GREEN) . PHP_EOL;
+        echo Color::colorize('  webrtc    Webrtc单房间直播', Color::FG_LIGHT_GREEN) . PHP_EOL;
     }
 
 }

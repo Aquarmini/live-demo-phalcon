@@ -5,14 +5,14 @@ namespace App\Controllers;
 class LiveController extends Controller
 {
 
-    public function easyLiverAction()
+    public function webrtcLiverAction()
     {
-        return $this->view->render('live/easy', 'liver');
+        return $this->view->render('live/webrtc', 'liver');
     }
 
-    public function easyWatcherAction()
+    public function webrtcWatcherAction()
     {
-        return $this->view->render('live/easy', 'watcher');
+        return $this->view->render('live/webrtc', 'watcher');
     }
 
 }
