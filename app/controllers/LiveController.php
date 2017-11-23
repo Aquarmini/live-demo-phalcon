@@ -10,5 +10,10 @@ class LiveController extends Controller
         return $this->view->render('live/easy', 'liver');
     }
 
+    public function easyWatcherAction()
+    {
+        return $this->view->render('live/easy', 'watcher');
+    }
+
 }
 

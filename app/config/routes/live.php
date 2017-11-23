@@ -8,3 +8,5 @@
 // +----------------------------------------------------------------------
 
 $router->add('/live/easy/liver', 'App\\Controllers\\Live::easyLiver')->setName('live.easy.liver');
+
+$router->add('/live/easy/watcher', 'App\\Controllers\\Live::easyWatcher')->setName('live.easy.watcher');

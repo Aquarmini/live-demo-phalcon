@@ -12,6 +12,7 @@ use Phalcon\Cli\Task;
 use Xin\Cli\Color;
 use swoole_websocket_server;
 use swoole_websocket_frame;
+use swoole_http_request;
 
 abstract class WebSocket extends Task
 {
@@ -65,7 +66,7 @@ abstract class WebSocket extends Task
      * @param swoole_websocket_server $server
      * @param                         $request
      */
-    abstract protected function connect(swoole_websocket_server $server, $request);
+    abstract protected function connect(swoole_websocket_server $server, swoole_http_request $request);
 
     /**
      * @desc   WebSocket 收到客户端消息
@@ -82,7 +83,7 @@ abstract class WebSocket extends Task
      * @param $fd
      * @return mixed
      */
-    abstract protected function close($ser, $fd);
+    abstract protected function close(swoole_websocket_server $ser, $fd);
 
     /**
      * @desc   准备开启服务器

@@ -7,7 +7,7 @@
             "iceServers": [{
                 "url": "stun:stunserver.org"
             }]
-        }; 
+        };
         //兼容浏览器的getUserMedia写法
         var getUserMedia = (navigator.getUserMedia ||
             navigator.webkitGetUserMedia ||
@@ -54,16 +54,6 @@
         }, function (error) {
             //处理媒体流创建失败错误
         });
-        //处理到来的信令
-        socket.onmessage = function (event) {
-            var json = JSON.parse(event.data);
-            console.log(json);
-            //如果是一个ICE的候选，则将其加入到PeerConnection中，否则设定对方的session描述为传递过来的描述
-            if (json.event === "__ice_candidate") {
-                pc.addIceCandidate(new RTCIceCandidate(json.data.candidate));
-            } else {
-                pc.setRemoteDescription(new RTCSessionDescription(json.data.sdp));
-            }
-        };
+
     </script>
 {% endblock %}
