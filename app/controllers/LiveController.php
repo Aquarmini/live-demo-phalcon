@@ -15,5 +15,10 @@ class LiveController extends Controller
         return $this->view->render('live/webrtc', 'watcher');
     }
 
+    public function hlsWatcherAction()
+    {
+        return $this->view->render('live/hls', 'watcher');
+    }
+
 }
 

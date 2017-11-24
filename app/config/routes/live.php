@@ -10,3 +10,5 @@
 $router->add('/live/webrtc/liver', 'App\\Controllers\\Live::webrtcLiver')->setName('live.webrtc.liver');
 
 $router->add('/live/webrtc/watcher', 'App\\Controllers\\Live::webrtcWatcher')->setName('live.webrtc.watcher');
+
+$router->add('/live/hls/watcher', 'App\\Controllers\\Live::hlsWatcher')->setName('live.hls.watcher');
